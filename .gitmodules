@@ -1,0 +1,3 @@
+[submodule "Solar Winds/rsscommon"]
+	path = Solar Winds/rsscommon
+	url = https://github.com/packagesdev/rsscommon
