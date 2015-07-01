@@ -3,9 +3,11 @@
 
 #import "RSSSolarWindsSettings.h"
 
+#import "RSSCollectionView.h"
+
 @interface RSSSolarWindsConfigurationWindowController () <NSCollectionViewDelegate>
 {
-	IBOutlet NSCollectionView *_settingsCollectionView;
+	IBOutlet RSSCollectionView *_settingsCollectionView;
 	
 	IBOutlet NSPopUpButton * _geometryTypePopupButton;
 	
@@ -31,6 +33,10 @@
 	
 	NSNumberFormatter * _numberFormatter;
 }
+
+- (void)updateMinValueOfParticlesPerWindSlider;
+
+- (void)setAsCustomSet;
 
 - (IBAction)setGeometryType:(id)sender;
 
@@ -115,6 +121,8 @@
 	[_motionBlurSlider setIntegerValue:tSolarWindsSettings.motionBlur];
 	[_motionBlurLabel setIntegerValue:tSolarWindsSettings.motionBlur];
 	
+	[self updateMinValueOfParticlesPerWindSlider];
+	
 	/* A COMPLETER */
 }
 
@@ -122,91 +130,17 @@
 
 - (BOOL)validateMenuItem:(NSMenuItem *)anItem
 {
-	
 	if ([anItem action]==@selector(print:))
-	{
 		return NO;
-	}
 	
 	return YES;
 }
 
 #pragma mark -
 
-- (IBAction)setGeometryType:(id)sender
-{
-	// A COMPLETER
-}
-
-- (IBAction)setNumberOfWinds:(id)sender
+- (void)updateMinValueOfParticlesPerWindSlider
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
-	
-	tSolarWindsSettings.numberOfWinds=[sender integerValue];
-	
-	[_numberOfWindsLabel setIntegerValue:tSolarWindsSettings.numberOfWinds];
-	
-	// A COMPLETER
-}
-
-- (IBAction)setWindSpeed:(id)sender
-{
-	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
-	
-	tSolarWindsSettings.windSpeed=[sender integerValue];
-	
-	[_windSpeedLabel setIntegerValue:tSolarWindsSettings.windSpeed];
-	
-	// A COMPLETER
-}
-
-
-- (IBAction)setNumberOfParticlesPerWind:(id)sender
-{
-	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
-	
-	tSolarWindsSettings.particlesPerWind=[sender integerValue];
-	
-	NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.particlesPerWind]];
-	
-	[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
-	
-	// A COMPLETER
-}
-
-- (IBAction)setParticleSize:(id)sender
-{
-	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
-	
-	tSolarWindsSettings.particleSize=[sender integerValue];
-	
-	[_particleSizeLabel setIntegerValue:tSolarWindsSettings.particleSize];
-	
-	// A COMPLETER
-}
-
-- (IBAction)setParticleSpeed:(id)sender
-{
-	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
-	
-	tSolarWindsSettings.particleSpeed=[sender integerValue];
-	
-	[_particleSpeedLabel setIntegerValue:tSolarWindsSettings.particleSpeed];
-	
-	// A COMPLETER
-}
-
-
-- (IBAction)setNumberOfEmittersPerWind:(id)sender
-{
-	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
-	
-	tSolarWindsSettings.emittersPerWind=[sender integerValue];
-	
-	NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.emittersPerWind]];
-	
-	[_numberOfEmittersPerWindLabel setStringValue:tFormattedString];
-	
 	
 	if (tSolarWindsSettings.geometryType==RSSSolarWindsGeometryTypeLines)
 	{
@@ -225,8 +159,103 @@
 			[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
 		}
 	}
+	else
+	{
+		[_numberOfParticlesPerWindSlider setMinValue:1];
+	}
+}
+
+- (void)setAsCustomSet
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	// A COMPLETER
+	tSolarWindsSettings.standardSet=RSSSolarWindsSetCustom;
+}
+
+- (IBAction)setGeometryType:(id)sender
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+	
+	tSolarWindsSettings.geometryType=[sender selectedTag];
+	
+	[self updateMinValueOfParticlesPerWindSlider];
+	
+	[self setAsCustomSet];
+}
+
+- (IBAction)setNumberOfWinds:(id)sender
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+	
+	tSolarWindsSettings.numberOfWinds=[sender integerValue];
+	
+	[_numberOfWindsLabel setIntegerValue:tSolarWindsSettings.numberOfWinds];
+	
+	[self setAsCustomSet];
+}
+
+- (IBAction)setWindSpeed:(id)sender
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+	
+	tSolarWindsSettings.windSpeed=[sender integerValue];
+	
+	[_windSpeedLabel setIntegerValue:tSolarWindsSettings.windSpeed];
+	
+	[self setAsCustomSet];
+}
+
+
+- (IBAction)setNumberOfParticlesPerWind:(id)sender
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+	
+	tSolarWindsSettings.particlesPerWind=[sender integerValue];
+	
+	NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.particlesPerWind]];
+	
+	[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
+	
+	[self setAsCustomSet];
+}
+
+- (IBAction)setParticleSize:(id)sender
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+	
+	tSolarWindsSettings.particleSize=[sender integerValue];
+	
+	[_particleSizeLabel setIntegerValue:tSolarWindsSettings.particleSize];
+	
+	[self setAsCustomSet];
+}
+
+- (IBAction)setParticleSpeed:(id)sender
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+	
+	tSolarWindsSettings.particleSpeed=[sender integerValue];
+	
+	[_particleSpeedLabel setIntegerValue:tSolarWindsSettings.particleSpeed];
+	
+	[self setAsCustomSet];
+}
+
+
+- (IBAction)setNumberOfEmittersPerWind:(id)sender
+{
+	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+	
+	tSolarWindsSettings.emittersPerWind=[sender integerValue];
+	
+	NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.emittersPerWind]];
+	
+	[_numberOfEmittersPerWindLabel setStringValue:tFormattedString];
+	
+	
+	[self updateMinValueOfParticlesPerWindSlider];
+	
+	[self setAsCustomSet];
 }
 
 - (IBAction)setEmitterSpeed:(id)sender
@@ -237,7 +266,7 @@
 	
 	[_emitterSpeedLabel setIntegerValue:tSolarWindsSettings.emitterSpeed];
 	
-	// A COMPLETER
+	[self setAsCustomSet];
 }
 
 
@@ -249,39 +278,8 @@
 	
 	[_motionBlurLabel setIntegerValue:tSolarWindsSettings.motionBlur];
 	
-	// A COMPLETER
+	[self setAsCustomSet];
 }
-
-
-
-
-/*
-
-- (IBAction)selectGeometry:(id)sender
-{
-	settings_.dGeometry=[[sender selectedItem] tag];
-	
-	settings_.standardSet=0;
-	[IBsettingsPopupButton_ selectItemAtIndex:[IBsettingsPopupButton_ indexOfItemWithTag:settings_.standardSet]];
-	
-	if (settings_.dGeometry==2)
-	{
-		[IBparticlesStepper_ setMinValue:settings_.dEmitters*3];
-		
-		if (settings_.dParticles<settings_.dEmitters*3)
-		{
-			settings_.dParticles=settings_.dEmitters*3;
-			
-			[IBparticlesStepper_ setIntValue:settings_.dParticles];
-			[IBparticlesTextField_ setIntValue:settings_.dParticles];
-		}
-	}
-	else
-	{
-		[IBparticlesStepper_ setMinValue:1.0];
-	}
-}
-*/
 
 - (void)preferredScrollerStyleDidChange:(NSNotification *)inNotification
 {

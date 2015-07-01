@@ -12,8 +12,6 @@
 
 #include "SolarWinds.h"
 
-#include <sys/time.h>
-
 #import <OpenGL/gl.h>
 
 @interface RSSSolarWindsView ()
