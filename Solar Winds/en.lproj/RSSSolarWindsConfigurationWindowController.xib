@@ -64,14 +64,14 @@
                             </textField>
                         </subviews>
                     </customView>
-                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="jtN-Je-2iR">
+                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="jtN-Je-2iR">
                         <rect key="frame" x="-1" y="489" width="527" height="115"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="oUj-hM-dL5">
-                            <rect key="frame" x="0.0" y="0.0" width="527" height="115"/>
+                            <rect key="frame" x="0.0" y="0.0" width="527" height="100"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <collectionView selectable="YES" maxNumberOfRows="1" id="jYh-rf-2M0">
+                                <collectionView selectable="YES" maxNumberOfRows="1" id="jYh-rf-2M0" customClass="RSSCollectionView">
                                     <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -82,7 +82,7 @@
                                 </collectionView>
                             </subviews>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="GWe-h4-fmG">
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="GWe-h4-fmG">
                             <rect key="frame" x="1" y="144" width="233" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -418,15 +418,6 @@ Gw
             </connections>
             <point key="canvasLocation" x="658.5" y="614.5"/>
         </window>
-        <collectionViewItem id="6F9-XT-DaT">
-            <connections>
-                <outlet property="view" destination="4UW-zF-kgB" id="Nd7-Rq-rug"/>
-            </connections>
-        </collectionViewItem>
-        <view id="4UW-zF-kgB">
-            <rect key="frame" x="0.0" y="-1" width="192" height="118"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <point key="canvasLocation" x="438" y="143"/>
-        </view>
+        <collectionViewItem nibName="RSSStandardSettingsView" id="6F9-XT-DaT" customClass="RSSCollectionViewItem"/>
     </objects>
 </document>

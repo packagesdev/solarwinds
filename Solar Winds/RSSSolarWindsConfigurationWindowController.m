@@ -5,7 +5,9 @@
 
 #import "RSSCollectionView.h"
 
-@interface RSSSolarWindsConfigurationWindowController () <NSCollectionViewDelegate>
+#import "RSSCollectionViewItem.h"
+
+@interface RSSSolarWindsConfigurationWindowController () <RSSCollectionViewDelegate>
 {
 	IBOutlet RSSCollectionView *_settingsCollectionView;
 	
@@ -34,9 +36,11 @@
 	NSNumberFormatter * _numberFormatter;
 }
 
-- (void)updateMinValueOfParticlesPerWindSlider;
+- (void)_updateMinValueOfParticlesPerWindSlider;
 
-- (void)setAsCustomSet;
+- (void)_selectCollectionViewItemWithTag:(NSInteger)inTag;
+
+- (void)_setAsCustomSet;
 
 - (IBAction)setGeometryType:(id)sender;
 
@@ -54,11 +58,16 @@
 
 
 
-- (void)preferredScrollerStyleDidChange:(NSNotification *)inNotification;
+/*- (void)preferredScrollerStyleDidChange:(NSNotification *)inNotification;*/
 
 @end
 
 @implementation RSSSolarWindsConfigurationWindowController
+
+- (void)dealloc
+{
+	[[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (Class)settingsClass
 {
@@ -77,11 +86,56 @@
 		_numberFormatter.localizesFormat=YES;
 	}
 	
-	[[NSDistributedNotificationCenter defaultCenter] addObserver:self
+	NSBundle * tBundle=[NSBundle bundleForClass:[self class]];
+	
+	NSArray * tStandardSettingsArray=@[@{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetRegular),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Regular",@"Localized",tBundle,@"")
+										 },
+									   @{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetCosmicStrings),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Cosmic Strings",@"Localized",tBundle,@"")
+										 },
+									   @{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetColdPricklies),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Cold Pricklies",@"Localized",tBundle,@"")
+										 },
+									   @{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetSpaceFur),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Space Fur",@"Localized",tBundle,@"")
+										 },
+									   @{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetJiggly),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Jiggly",@"Localized",tBundle,@"")
+										 },
+									   @{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetUndertow),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Undertow",@"Localized",tBundle,@"")
+										 },
+									   @{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetRandom),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Random",@"Localized",tBundle,@"")
+										 },
+									   @{
+										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetCustom),
+										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Custom",@"Localized",tBundle,@"")
+										 }];
+	
+	[_settingsCollectionView setContent:tStandardSettingsArray];
+	
+	/*[[NSDistributedNotificationCenter defaultCenter] addObserver:self
 														selector:@selector(preferredScrollerStyleDidChange:)
 															name:NSPreferredScrollerStyleDidChangeNotification
 														  object:nil
-											  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
+											  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];*/
 }
 
 - (void)restoreUI
@@ -90,7 +144,7 @@
 	
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	// A COMPLETER
+	[self _selectCollectionViewItemWithTag:tSolarWindsSettings.standardSet];
 	
 	[_geometryTypePopupButton selectItemWithTag:tSolarWindsSettings.geometryType];
 	
@@ -121,24 +175,12 @@
 	[_motionBlurSlider setIntegerValue:tSolarWindsSettings.motionBlur];
 	[_motionBlurLabel setIntegerValue:tSolarWindsSettings.motionBlur];
 	
-	[self updateMinValueOfParticlesPerWindSlider];
-	
-	/* A COMPLETER */
+	[self _updateMinValueOfParticlesPerWindSlider];
 }
 
 #pragma mark -
 
-- (BOOL)validateMenuItem:(NSMenuItem *)anItem
-{
-	if ([anItem action]==@selector(print:))
-		return NO;
-	
-	return YES;
-}
-
-#pragma mark -
-
-- (void)updateMinValueOfParticlesPerWindSlider
+- (void)_updateMinValueOfParticlesPerWindSlider
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
@@ -165,11 +207,33 @@
 	}
 }
 
-- (void)setAsCustomSet
+- (void)_selectCollectionViewItemWithTag:(NSInteger)inTag
+{
+	[_settingsCollectionView.content enumerateObjectsUsingBlock:^(NSDictionary * bDictionary,NSUInteger bIndex,BOOL * bOutStop){
+		NSNumber * tNumber=bDictionary[RSSCollectionViewRepresentedObjectTag];
+		
+		if (tNumber!=nil)
+		{
+			if (inTag==[tNumber integerValue])
+			{
+				[_settingsCollectionView RSS_selectItemAtIndex:bIndex];
+				
+				*bOutStop=YES;
+			}
+		}
+	}];
+}
+
+- (void)_setAsCustomSet
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.standardSet=RSSSolarWindsSetCustom;
+	if (tSolarWindsSettings.standardSet!=RSSSolarWindsSetCustom)
+	{
+		tSolarWindsSettings.standardSet=RSSSolarWindsSetCustom;
+	
+		[self _selectCollectionViewItemWithTag:tSolarWindsSettings.standardSet];
+	}
 }
 
 - (IBAction)setGeometryType:(id)sender
@@ -178,9 +242,9 @@
 	
 	tSolarWindsSettings.geometryType=[sender selectedTag];
 	
-	[self updateMinValueOfParticlesPerWindSlider];
+	[self _updateMinValueOfParticlesPerWindSlider];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 - (IBAction)setNumberOfWinds:(id)sender
@@ -191,7 +255,7 @@
 	
 	[_numberOfWindsLabel setIntegerValue:tSolarWindsSettings.numberOfWinds];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 - (IBAction)setWindSpeed:(id)sender
@@ -202,7 +266,7 @@
 	
 	[_windSpeedLabel setIntegerValue:tSolarWindsSettings.windSpeed];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 
@@ -216,7 +280,7 @@
 	
 	[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 - (IBAction)setParticleSize:(id)sender
@@ -227,7 +291,7 @@
 	
 	[_particleSizeLabel setIntegerValue:tSolarWindsSettings.particleSize];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 - (IBAction)setParticleSpeed:(id)sender
@@ -238,7 +302,7 @@
 	
 	[_particleSpeedLabel setIntegerValue:tSolarWindsSettings.particleSpeed];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 
@@ -253,9 +317,9 @@
 	[_numberOfEmittersPerWindLabel setStringValue:tFormattedString];
 	
 	
-	[self updateMinValueOfParticlesPerWindSlider];
+	[self _updateMinValueOfParticlesPerWindSlider];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 - (IBAction)setEmitterSpeed:(id)sender
@@ -266,7 +330,7 @@
 	
 	[_emitterSpeedLabel setIntegerValue:tSolarWindsSettings.emitterSpeed];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
 
@@ -278,12 +342,58 @@
 	
 	[_motionBlurLabel setIntegerValue:tSolarWindsSettings.motionBlur];
 	
-	[self setAsCustomSet];
+	[self _setAsCustomSet];
 }
 
-- (void)preferredScrollerStyleDidChange:(NSNotification *)inNotification
+#pragma mark -
+
+- (BOOL)RSS_collectionView:(NSCollectionView *)inCollectionView shouldSelectItemAtIndex:(NSInteger)inIndex
+{
+	RSSCollectionViewItem * tCollectionViewItem=(RSSCollectionViewItem *)[_settingsCollectionView itemAtIndex:inIndex];
+	
+	if (tCollectionViewItem!=nil)
+	{
+		NSInteger tTag=tCollectionViewItem.tag;
+		
+		if (tTag==RSSSolarWindsSetCustom)
+			return NO;
+	}
+	
+	return YES;
+}
+
+- (void)RSS_collectionViewSelectionDidChange:(NSNotification *)inNotification
+{
+	if (inNotification.object==_settingsCollectionView)
+	{
+		NSIndexSet * tIndexSet=[_settingsCollectionView selectionIndexes];
+		NSUInteger tIndex=[tIndexSet firstIndex];
+		
+		RSSCollectionViewItem * tCollectionViewItem=(RSSCollectionViewItem *)[_settingsCollectionView itemAtIndex:tIndex];
+		
+		if (tCollectionViewItem!=nil)
+		{
+			NSInteger tTag=tCollectionViewItem.tag;
+			RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
+			
+			if (tSolarWindsSettings.standardSet!=tTag)
+			{
+				tSolarWindsSettings.standardSet=tTag;
+				
+				if (tTag!=RSSSolarWindsSetRandom)
+				{
+					[tSolarWindsSettings resetSettingsToStandardSet:tTag];
+					
+					[self restoreUI];
+				}
+			}
+		}
+	}
+}
+
+/*- (void)preferredScrollerStyleDidChange:(NSNotification *)inNotification
 {
 	NSLog(@"preferredScrollerStyleDidChange");
-}
+}*/
 
 @end
