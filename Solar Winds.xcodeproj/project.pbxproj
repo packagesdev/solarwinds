@@ -34,6 +34,20 @@
 		F490BF0F1B4498B50022E596 /* RSSCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = F490BF0D1B4498B50022E596 /* RSSCollectionView.h */; };
 		F490BF101B4498B50022E596 /* RSSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F490BF0E1B4498B50022E596 /* RSSCollectionView.m */; };
 		F494823F1AEAFA41000BDFA1 /* RSSSolarWindsConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F494823D1AEAFA41000BDFA1 /* RSSSolarWindsConfigurationWindowController.xib */; };
+		F4AB003F1B49A7BF00737BD5 /* cold_pricklies_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB00331B49A7BF00737BD5 /* cold_pricklies_thumbnail.png */; };
+		F4AB00401B49A7BF00737BD5 /* cold_pricklies_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB00341B49A7BF00737BD5 /* cold_pricklies_thumbnail@2x.png */; };
+		F4AB00411B49A7BF00737BD5 /* cosmic_strings_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB00351B49A7BF00737BD5 /* cosmic_strings_thumbnail.png */; };
+		F4AB00421B49A7BF00737BD5 /* cosmic_strings_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB00361B49A7BF00737BD5 /* cosmic_strings_thumbnail@2x.png */; };
+		F4AB00431B49A7BF00737BD5 /* jiggy_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB00371B49A7BF00737BD5 /* jiggy_thumbnail.png */; };
+		F4AB00441B49A7BF00737BD5 /* jiggy_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB00381B49A7BF00737BD5 /* jiggy_thumbnail@2x.png */; };
+		F4AB00451B49A7BF00737BD5 /* regular_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB00391B49A7BF00737BD5 /* regular_thumbnail.png */; };
+		F4AB00461B49A7BF00737BD5 /* regular_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB003A1B49A7BF00737BD5 /* regular_thumbnail@2x.png */; };
+		F4AB00471B49A7BF00737BD5 /* space_fur_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB003B1B49A7BF00737BD5 /* space_fur_thumbnail.png */; };
+		F4AB00481B49A7BF00737BD5 /* space_fur_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB003C1B49A7BF00737BD5 /* space_fur_thumbnail@2x.png */; };
+		F4AB00491B49A7BF00737BD5 /* undertow_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB003D1B49A7BF00737BD5 /* undertow_thumbnail.png */; };
+		F4AB004A1B49A7BF00737BD5 /* undertow_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB003E1B49A7BF00737BD5 /* undertow_thumbnail@2x.png */; };
+		F4AB004D1B49A93400737BD5 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB004B1B49A93400737BD5 /* thumbnail.png */; };
+		F4AB004E1B49A93400737BD5 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB004C1B49A93400737BD5 /* thumbnail@2x.png */; };
 		F4CC2BF41B449F9700968EBF /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4CC2BF21B449F9700968EBF /* Localized.strings */; };
 		F4DA63C01B48A44B0024B369 /* RSSCollectionViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DA63BC1B48A44B0024B369 /* RSSCollectionViewItem.h */; };
 		F4DA63C11B48A44B0024B369 /* RSSCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63BD1B48A44B0024B369 /* RSSCollectionViewItem.m */; };
@@ -41,6 +55,23 @@
 		F4DA63C31B48A44B0024B369 /* RSSCollectionViewItemLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63BF1B48A44B0024B369 /* RSSCollectionViewItemLabel.m */; };
 		F4DA63C51B48A4510024B369 /* RSSStandardSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DA63C41B48A4510024B369 /* RSSStandardSettingsView.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4AB005A1B49AB3000737BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AB00561B49AB3000737BD5 /* refafactor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F49477B31B15330700763450;
+			remoteInfo = refafactor;
+		};
+		F4AB005C1B49AB3900737BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AB00561B49AB3000737BD5 /* refafactor.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F49477B21B15330700763450;
+			remoteInfo = refafactor;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F45B8F041AE5A919004CAF04 /* SolarWinds.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SolarWinds.cpp; path = GPL/SolarWinds.cpp; sourceTree = "<group>"; };
@@ -72,6 +103,21 @@
 		F490BF0D1B4498B50022E596 /* RSSCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionView.h; path = rsscommon/RSSCollectionView.h; sourceTree = "<group>"; };
 		F490BF0E1B4498B50022E596 /* RSSCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSCollectionView.m; path = rsscommon/RSSCollectionView.m; sourceTree = "<group>"; };
 		F494823E1AEAFA41000BDFA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RSSSolarWindsConfigurationWindowController.xib; sourceTree = "<group>"; };
+		F4AB00331B49A7BF00737BD5 /* cold_pricklies_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cold_pricklies_thumbnail.png; path = images/cold_pricklies_thumbnail.png; sourceTree = "<group>"; };
+		F4AB00341B49A7BF00737BD5 /* cold_pricklies_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cold_pricklies_thumbnail@2x.png"; path = "images/cold_pricklies_thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4AB00351B49A7BF00737BD5 /* cosmic_strings_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cosmic_strings_thumbnail.png; path = images/cosmic_strings_thumbnail.png; sourceTree = "<group>"; };
+		F4AB00361B49A7BF00737BD5 /* cosmic_strings_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cosmic_strings_thumbnail@2x.png"; path = "images/cosmic_strings_thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4AB00371B49A7BF00737BD5 /* jiggy_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jiggy_thumbnail.png; path = images/jiggy_thumbnail.png; sourceTree = "<group>"; };
+		F4AB00381B49A7BF00737BD5 /* jiggy_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jiggy_thumbnail@2x.png"; path = "images/jiggy_thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4AB00391B49A7BF00737BD5 /* regular_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = regular_thumbnail.png; path = images/regular_thumbnail.png; sourceTree = "<group>"; };
+		F4AB003A1B49A7BF00737BD5 /* regular_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "regular_thumbnail@2x.png"; path = "images/regular_thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4AB003B1B49A7BF00737BD5 /* space_fur_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = space_fur_thumbnail.png; path = images/space_fur_thumbnail.png; sourceTree = "<group>"; };
+		F4AB003C1B49A7BF00737BD5 /* space_fur_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "space_fur_thumbnail@2x.png"; path = "images/space_fur_thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4AB003D1B49A7BF00737BD5 /* undertow_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = undertow_thumbnail.png; path = images/undertow_thumbnail.png; sourceTree = "<group>"; };
+		F4AB003E1B49A7BF00737BD5 /* undertow_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "undertow_thumbnail@2x.png"; path = "images/undertow_thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4AB004B1B49A93400737BD5 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbnail.png; path = images/thumbnail.png; sourceTree = "<group>"; };
+		F4AB004C1B49A93400737BD5 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumbnail@2x.png"; path = "images/thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4AB00561B49AB3000737BD5 /* refafactor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = refafactor.xcodeproj; path = "Solar Winds/rsscommon/refafactor/refafactor.xcodeproj"; sourceTree = "<group>"; };
 		F4CC2BF31B449F9700968EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		F4DA63BC1B48A44B0024B369 /* RSSCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionViewItem.h; path = rsscommon/RSSCollectionViewItem.h; sourceTree = "<group>"; };
 		F4DA63BD1B48A44B0024B369 /* RSSCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSCollectionViewItem.m; path = rsscommon/RSSCollectionViewItem.m; sourceTree = "<group>"; };
@@ -103,6 +149,7 @@
 		F4612CC81AE1B52600F4F028 = {
 			isa = PBXGroup;
 			children = (
+				F4AB00561B49AB3000737BD5 /* refafactor.xcodeproj */,
 				F4612CD41AE1B52600F4F028 /* Solar Winds */,
 				F4612CD31AE1B52600F4F028 /* Products */,
 			);
@@ -135,8 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				F4612CD61AE1B52600F4F028 /* Info.plist */,
-				F4CC2BF21B449F9700968EBF /* Localized.strings */,
-				F494823D1AEAFA41000BDFA1 /* RSSSolarWindsConfigurationWindowController.xib */,
+				F4AB00321B49A7B200737BD5 /* images */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,6 +192,9 @@
 			children = (
 				F4612CE51AE1B7D600F4F028 /* RSSSolarWindsConfigurationWindowController.h */,
 				F4612CE61AE1B7D600F4F028 /* RSSSolarWindsConfigurationWindowController.m */,
+				F4CC2BF21B449F9700968EBF /* Localized.strings */,
+				F494823D1AEAFA41000BDFA1 /* RSSSolarWindsConfigurationWindowController.xib */,
+				F4AB00551B49AA4B00737BD5 /* images */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -188,6 +237,42 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		F4AB00321B49A7B200737BD5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB004B1B49A93400737BD5 /* thumbnail.png */,
+				F4AB004C1B49A93400737BD5 /* thumbnail@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		F4AB00551B49AA4B00737BD5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB00331B49A7BF00737BD5 /* cold_pricklies_thumbnail.png */,
+				F4AB00341B49A7BF00737BD5 /* cold_pricklies_thumbnail@2x.png */,
+				F4AB00351B49A7BF00737BD5 /* cosmic_strings_thumbnail.png */,
+				F4AB00361B49A7BF00737BD5 /* cosmic_strings_thumbnail@2x.png */,
+				F4AB00371B49A7BF00737BD5 /* jiggy_thumbnail.png */,
+				F4AB00381B49A7BF00737BD5 /* jiggy_thumbnail@2x.png */,
+				F4AB00391B49A7BF00737BD5 /* regular_thumbnail.png */,
+				F4AB003A1B49A7BF00737BD5 /* regular_thumbnail@2x.png */,
+				F4AB003B1B49A7BF00737BD5 /* space_fur_thumbnail.png */,
+				F4AB003C1B49A7BF00737BD5 /* space_fur_thumbnail@2x.png */,
+				F4AB003D1B49A7BF00737BD5 /* undertow_thumbnail.png */,
+				F4AB003E1B49A7BF00737BD5 /* undertow_thumbnail@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		F4AB00571B49AB3000737BD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB005B1B49AB3000737BD5 /* refafactor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -223,10 +308,12 @@
 				F4612CCE1AE1B52600F4F028 /* Frameworks */,
 				F4612CCF1AE1B52600F4F028 /* Headers */,
 				F4612CD01AE1B52600F4F028 /* Resources */,
+				F4AB005E1B49AB4500737BD5 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F4AB005D1B49AB3900737BD5 /* PBXTargetDependency */,
 			);
 			name = "Solar Winds";
 			productName = "Solar Winds";
@@ -256,6 +343,12 @@
 			mainGroup = F4612CC81AE1B52600F4F028;
 			productRefGroup = F4612CD31AE1B52600F4F028 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F4AB00571B49AB3000737BD5 /* Products */;
+					ProjectRef = F4AB00561B49AB3000737BD5 /* refafactor.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F4612CD11AE1B52600F4F028 /* Solar Winds */,
@@ -263,20 +356,60 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		F4AB005B1B49AB3000737BD5 /* refafactor */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = refafactor;
+			remoteRef = F4AB005A1B49AB3000737BD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		F4612CD01AE1B52600F4F028 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4CC2BF41B449F9700968EBF /* Localized.strings in Resources */,
+				F4AB00411B49A7BF00737BD5 /* cosmic_strings_thumbnail.png in Resources */,
+				F4AB004D1B49A93400737BD5 /* thumbnail.png in Resources */,
+				F4AB00481B49A7BF00737BD5 /* space_fur_thumbnail@2x.png in Resources */,
+				F4AB00421B49A7BF00737BD5 /* cosmic_strings_thumbnail@2x.png in Resources */,
+				F4AB00491B49A7BF00737BD5 /* undertow_thumbnail.png in Resources */,
 				F467A3911AF1AE4500C5D70D /* RSSAboutBoxWindowController.xib in Resources */,
 				F4DA63C51B48A4510024B369 /* RSSStandardSettingsView.xib in Resources */,
+				F4AB00441B49A7BF00737BD5 /* jiggy_thumbnail@2x.png in Resources */,
+				F4AB003F1B49A7BF00737BD5 /* cold_pricklies_thumbnail.png in Resources */,
+				F4AB004A1B49A7BF00737BD5 /* undertow_thumbnail@2x.png in Resources */,
 				F494823F1AEAFA41000BDFA1 /* RSSSolarWindsConfigurationWindowController.xib in Resources */,
+				F4AB00431B49A7BF00737BD5 /* jiggy_thumbnail.png in Resources */,
+				F4AB00471B49A7BF00737BD5 /* space_fur_thumbnail.png in Resources */,
+				F4AB00461B49A7BF00737BD5 /* regular_thumbnail@2x.png in Resources */,
+				F4AB00451B49A7BF00737BD5 /* regular_thumbnail.png in Resources */,
+				F4AB004E1B49A93400737BD5 /* thumbnail@2x.png in Resources */,
 				F467A38F1AF1AE3E00C5D70D /* Localizable.strings in Resources */,
+				F4AB00401B49A7BF00737BD5 /* cold_pricklies_thumbnail@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4AB005E1B49AB4500737BD5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#Refactor the rsscommon class to avoid warning or issues when multiple RSS screen savers are installed.\n\n\"${TARGET_BUILD_DIR}\"/refafactor --bundle \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" --prefix SOL\n\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4612CCD1AE1B52600F4F028 /* Sources */ = {
@@ -301,6 +434,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4AB005D1B49AB3900737BD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = refafactor;
+			targetProxy = F4AB005C1B49AB3900737BD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F467A38D1AF1AE3E00C5D70D /* Localizable.strings */ = {
@@ -410,7 +551,7 @@
 		F4612CDE1AE1B52600F4F028 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				INFOPLIST_FILE = "Solar Winds/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,7 +562,7 @@
 		F4612CDF1AE1B52600F4F028 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				INFOPLIST_FILE = "Solar Winds/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				PRODUCT_NAME = "$(TARGET_NAME)";

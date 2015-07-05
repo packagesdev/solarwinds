@@ -89,32 +89,32 @@
 	NSBundle * tBundle=[NSBundle bundleForClass:[self class]];
 	
 	NSArray * tStandardSettingsArray=@[@{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"regular_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetRegular),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Regular",@"Localized",tBundle,@"")
 										 },
 									   @{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"cosmic_strings_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetCosmicStrings),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Cosmic Strings",@"Localized",tBundle,@"")
 										 },
 									   @{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"cold_pricklies_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetColdPricklies),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Cold Pricklies",@"Localized",tBundle,@"")
 										 },
 									   @{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"space_fur_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetSpaceFur),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Space Fur",@"Localized",tBundle,@"")
 										 },
 									   @{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"jiggy_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetJiggly),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Jiggly",@"Localized",tBundle,@"")
 										 },
 									   @{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"undertow_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetUndertow),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Undertow",@"Localized",tBundle,@"")
 										 },
@@ -240,33 +240,42 @@
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.geometryType=[sender selectedTag];
-	
-	[self _updateMinValueOfParticlesPerWindSlider];
-	
-	[self _setAsCustomSet];
+	if (tSolarWindsSettings.geometryType!=[sender selectedTag])
+	{
+		tSolarWindsSettings.geometryType=[sender selectedTag];
+		
+		[self _updateMinValueOfParticlesPerWindSlider];
+		
+		[self _setAsCustomSet];
+	}
 }
 
 - (IBAction)setNumberOfWinds:(id)sender
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.numberOfWinds=[sender integerValue];
+	if (tSolarWindsSettings.numberOfWinds!=[sender integerValue])
+	{
+		tSolarWindsSettings.numberOfWinds=[sender integerValue];
 	
-	[_numberOfWindsLabel setIntegerValue:tSolarWindsSettings.numberOfWinds];
+		[_numberOfWindsLabel setIntegerValue:tSolarWindsSettings.numberOfWinds];
 	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
 
 - (IBAction)setWindSpeed:(id)sender
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.windSpeed=[sender integerValue];
+	if (tSolarWindsSettings.windSpeed!=[sender integerValue])
+	{
+		tSolarWindsSettings.windSpeed=[sender integerValue];
 	
-	[_windSpeedLabel setIntegerValue:tSolarWindsSettings.windSpeed];
+		[_windSpeedLabel setIntegerValue:tSolarWindsSettings.windSpeed];
 	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
 
 
@@ -274,35 +283,44 @@
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.particlesPerWind=[sender integerValue];
+	if (tSolarWindsSettings.particlesPerWind!=[sender integerValue])
+	{
+		tSolarWindsSettings.particlesPerWind=[sender integerValue];
+		
+		NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.particlesPerWind]];
 	
-	NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.particlesPerWind]];
+		[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
 	
-	[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
-	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
 
 - (IBAction)setParticleSize:(id)sender
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.particleSize=[sender integerValue];
+	if (tSolarWindsSettings.particleSize!=[sender integerValue])
+	{
+		tSolarWindsSettings.particleSize=[sender integerValue];
 	
-	[_particleSizeLabel setIntegerValue:tSolarWindsSettings.particleSize];
+		[_particleSizeLabel setIntegerValue:tSolarWindsSettings.particleSize];
 	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
 
 - (IBAction)setParticleSpeed:(id)sender
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.particleSpeed=[sender integerValue];
+	if (tSolarWindsSettings.particleSpeed!=[sender integerValue])
+	{
+		tSolarWindsSettings.particleSpeed=[sender integerValue];
 	
-	[_particleSpeedLabel setIntegerValue:tSolarWindsSettings.particleSpeed];
+		[_particleSpeedLabel setIntegerValue:tSolarWindsSettings.particleSpeed];
 	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
 
 
@@ -310,39 +328,46 @@
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.emittersPerWind=[sender integerValue];
+	if (tSolarWindsSettings.emittersPerWind!=[sender integerValue])
+	{
+		tSolarWindsSettings.emittersPerWind=[sender integerValue];
 	
-	NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.emittersPerWind]];
+		NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.emittersPerWind]];
 	
-	[_numberOfEmittersPerWindLabel setStringValue:tFormattedString];
+		[_numberOfEmittersPerWindLabel setStringValue:tFormattedString];
 	
+		[self _updateMinValueOfParticlesPerWindSlider];
 	
-	[self _updateMinValueOfParticlesPerWindSlider];
-	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
 
 - (IBAction)setEmitterSpeed:(id)sender
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.emitterSpeed=[sender integerValue];
+	if (tSolarWindsSettings.emitterSpeed!=[sender integerValue])
+	{
+		tSolarWindsSettings.emitterSpeed=[sender integerValue];
 	
-	[_emitterSpeedLabel setIntegerValue:tSolarWindsSettings.emitterSpeed];
+		[_emitterSpeedLabel setIntegerValue:tSolarWindsSettings.emitterSpeed];
 	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
-
 
 - (IBAction)setMotionBlur:(id)sender
 {
 	RSSSolarWindsSettings * tSolarWindsSettings=(RSSSolarWindsSettings *) sceneSettings;
 	
-	tSolarWindsSettings.motionBlur=[sender integerValue];
+	if (tSolarWindsSettings.motionBlur!=[sender integerValue])
+	{
+		tSolarWindsSettings.motionBlur=[sender integerValue];
 	
-	[_motionBlurLabel setIntegerValue:tSolarWindsSettings.motionBlur];
+		[_motionBlurLabel setIntegerValue:tSolarWindsSettings.motionBlur];
 	
-	[self _setAsCustomSet];
+		[self _setAsCustomSet];
+	}
 }
 
 #pragma mark -
