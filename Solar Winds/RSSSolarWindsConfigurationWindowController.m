@@ -119,12 +119,12 @@
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Undertow",@"Localized",tBundle,@"")
 										 },
 									   @{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"random_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetRandom),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Random",@"Localized",tBundle,@"")
 										 },
 									   @{
-										   RSSCollectionViewRepresentedObjectThumbnail : @"",
+										   RSSCollectionViewRepresentedObjectThumbnail : @"custom_thumbnail",
 										   RSSCollectionViewRepresentedObjectTag : @(RSSSolarWindsSetCustom),
 										   RSSCollectionViewRepresentedObjectName : NSLocalizedStringFromTableInBundle(@"Custom",@"Localized",tBundle,@"")
 										 }];

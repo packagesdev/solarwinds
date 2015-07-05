@@ -48,7 +48,11 @@
 		F4AB004A1B49A7BF00737BD5 /* undertow_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB003E1B49A7BF00737BD5 /* undertow_thumbnail@2x.png */; };
 		F4AB004D1B49A93400737BD5 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB004B1B49A93400737BD5 /* thumbnail.png */; };
 		F4AB004E1B49A93400737BD5 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB004C1B49A93400737BD5 /* thumbnail@2x.png */; };
+		F4AB006E1B49CF9400737BD5 /* custom_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB006C1B49CF9400737BD5 /* custom_thumbnail.png */; };
+		F4AB006F1B49CF9400737BD5 /* custom_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB006D1B49CF9400737BD5 /* custom_thumbnail@2x.png */; };
 		F4CC2BF41B449F9700968EBF /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4CC2BF21B449F9700968EBF /* Localized.strings */; };
+		F4D2001C1B49D27F00F11EC6 /* random_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D2001A1B49D27F00F11EC6 /* random_thumbnail.png */; };
+		F4D2001D1B49D27F00F11EC6 /* random_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D2001B1B49D27F00F11EC6 /* random_thumbnail@2x.png */; };
 		F4DA63C01B48A44B0024B369 /* RSSCollectionViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DA63BC1B48A44B0024B369 /* RSSCollectionViewItem.h */; };
 		F4DA63C11B48A44B0024B369 /* RSSCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63BD1B48A44B0024B369 /* RSSCollectionViewItem.m */; };
 		F4DA63C21B48A44B0024B369 /* RSSCollectionViewItemLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DA63BE1B48A44B0024B369 /* RSSCollectionViewItemLabel.h */; };
@@ -118,7 +122,11 @@
 		F4AB004B1B49A93400737BD5 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbnail.png; path = images/thumbnail.png; sourceTree = "<group>"; };
 		F4AB004C1B49A93400737BD5 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumbnail@2x.png"; path = "images/thumbnail@2x.png"; sourceTree = "<group>"; };
 		F4AB00561B49AB3000737BD5 /* refafactor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = refafactor.xcodeproj; path = "Solar Winds/rsscommon/refafactor/refafactor.xcodeproj"; sourceTree = "<group>"; };
+		F4AB006C1B49CF9400737BD5 /* custom_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = custom_thumbnail.png; path = rsscommon/CreativeCommons/custom_thumbnail.png; sourceTree = "<group>"; };
+		F4AB006D1B49CF9400737BD5 /* custom_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "custom_thumbnail@2x.png"; path = "rsscommon/CreativeCommons/custom_thumbnail@2x.png"; sourceTree = "<group>"; };
 		F4CC2BF31B449F9700968EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		F4D2001A1B49D27F00F11EC6 /* random_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = random_thumbnail.png; path = rsscommon/CreativeCommons/random_thumbnail.png; sourceTree = "<group>"; };
+		F4D2001B1B49D27F00F11EC6 /* random_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "random_thumbnail@2x.png"; path = "rsscommon/CreativeCommons/random_thumbnail@2x.png"; sourceTree = "<group>"; };
 		F4DA63BC1B48A44B0024B369 /* RSSCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionViewItem.h; path = rsscommon/RSSCollectionViewItem.h; sourceTree = "<group>"; };
 		F4DA63BD1B48A44B0024B369 /* RSSCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSCollectionViewItem.m; path = rsscommon/RSSCollectionViewItem.m; sourceTree = "<group>"; };
 		F4DA63BE1B48A44B0024B369 /* RSSCollectionViewItemLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionViewItemLabel.h; path = rsscommon/RSSCollectionViewItemLabel.h; sourceTree = "<group>"; };
@@ -222,6 +230,7 @@
 				F4DA63BD1B48A44B0024B369 /* RSSCollectionViewItem.m */,
 				F4DA63BE1B48A44B0024B369 /* RSSCollectionViewItemLabel.h */,
 				F4DA63BF1B48A44B0024B369 /* RSSCollectionViewItemLabel.m */,
+				F4AB006B1B49CF8800737BD5 /* CommonCreatives */,
 				F467A38C1AF1AE3200C5D70D /* Resources */,
 			);
 			name = rsscommon;
@@ -271,6 +280,17 @@
 				F4AB005B1B49AB3000737BD5 /* refafactor */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F4AB006B1B49CF8800737BD5 /* CommonCreatives */ = {
+			isa = PBXGroup;
+			children = (
+				F4D2001A1B49D27F00F11EC6 /* random_thumbnail.png */,
+				F4D2001B1B49D27F00F11EC6 /* random_thumbnail@2x.png */,
+				F4AB006C1B49CF9400737BD5 /* custom_thumbnail.png */,
+				F4AB006D1B49CF9400737BD5 /* custom_thumbnail@2x.png */,
+			);
+			name = CommonCreatives;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,19 +391,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D2001D1B49D27F00F11EC6 /* random_thumbnail@2x.png in Resources */,
 				F4CC2BF41B449F9700968EBF /* Localized.strings in Resources */,
 				F4AB00411B49A7BF00737BD5 /* cosmic_strings_thumbnail.png in Resources */,
 				F4AB004D1B49A93400737BD5 /* thumbnail.png in Resources */,
+				F4AB006F1B49CF9400737BD5 /* custom_thumbnail@2x.png in Resources */,
 				F4AB00481B49A7BF00737BD5 /* space_fur_thumbnail@2x.png in Resources */,
 				F4AB00421B49A7BF00737BD5 /* cosmic_strings_thumbnail@2x.png in Resources */,
 				F4AB00491B49A7BF00737BD5 /* undertow_thumbnail.png in Resources */,
 				F467A3911AF1AE4500C5D70D /* RSSAboutBoxWindowController.xib in Resources */,
 				F4DA63C51B48A4510024B369 /* RSSStandardSettingsView.xib in Resources */,
+				F4D2001C1B49D27F00F11EC6 /* random_thumbnail.png in Resources */,
 				F4AB00441B49A7BF00737BD5 /* jiggy_thumbnail@2x.png in Resources */,
 				F4AB003F1B49A7BF00737BD5 /* cold_pricklies_thumbnail.png in Resources */,
 				F4AB004A1B49A7BF00737BD5 /* undertow_thumbnail@2x.png in Resources */,
 				F494823F1AEAFA41000BDFA1 /* RSSSolarWindsConfigurationWindowController.xib in Resources */,
 				F4AB00431B49A7BF00737BD5 /* jiggy_thumbnail.png in Resources */,
+				F4AB006E1B49CF9400737BD5 /* custom_thumbnail.png in Resources */,
 				F4AB00471B49A7BF00737BD5 /* space_fur_thumbnail.png in Resources */,
 				F4AB00461B49A7BF00737BD5 /* regular_thumbnail@2x.png in Resources */,
 				F4AB00451B49A7BF00737BD5 /* regular_thumbnail.png in Resources */,
