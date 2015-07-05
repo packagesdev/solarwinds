@@ -127,6 +127,9 @@
 		F4CC2BF31B449F9700968EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		F4D2001A1B49D27F00F11EC6 /* random_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = random_thumbnail.png; path = rsscommon/CreativeCommons/random_thumbnail.png; sourceTree = "<group>"; };
 		F4D2001B1B49D27F00F11EC6 /* random_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "random_thumbnail@2x.png"; path = "rsscommon/CreativeCommons/random_thumbnail@2x.png"; sourceTree = "<group>"; };
+		F4D200221B49DC5C00F11EC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localized.strings; sourceTree = "<group>"; };
+		F4D200231B49DC5C00F11EC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/RSSSolarWindsConfigurationWindowController.xib; sourceTree = "<group>"; };
+		F4D200241B49DC6D00F11EC6 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = rsscommon/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4DA63BC1B48A44B0024B369 /* RSSCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionViewItem.h; path = rsscommon/RSSCollectionViewItem.h; sourceTree = "<group>"; };
 		F4DA63BD1B48A44B0024B369 /* RSSCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSCollectionViewItem.m; path = rsscommon/RSSCollectionViewItem.m; sourceTree = "<group>"; };
 		F4DA63BE1B48A44B0024B369 /* RSSCollectionViewItemLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionViewItemLabel.h; path = rsscommon/RSSCollectionViewItemLabel.h; sourceTree = "<group>"; };
@@ -359,6 +362,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
 			);
 			mainGroup = F4612CC81AE1B52600F4F028;
 			productRefGroup = F4612CD31AE1B52600F4F028 /* Products */;
@@ -472,6 +476,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F467A38E1AF1AE3E00C5D70D /* en */,
+				F4D200241B49DC6D00F11EC6 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F494823E1AEAFA41000BDFA1 /* en */,
+				F4D200231B49DC5C00F11EC6 /* fr */,
 			);
 			name = RSSSolarWindsConfigurationWindowController.xib;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F4CC2BF31B449F9700968EBF /* en */,
+				F4D200221B49DC5C00F11EC6 /* fr */,
 			);
 			name = Localized.strings;
 			sourceTree = "<group>";
