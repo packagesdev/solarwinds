@@ -130,6 +130,12 @@
 		F4D200221B49DC5C00F11EC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localized.strings; sourceTree = "<group>"; };
 		F4D200231B49DC5C00F11EC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/RSSSolarWindsConfigurationWindowController.xib; sourceTree = "<group>"; };
 		F4D200241B49DC6D00F11EC6 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = rsscommon/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4D2C9891B4B2D24005B7CD7 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localized.strings; sourceTree = "<group>"; };
+		F4D2C98A1B4B2D24005B7CD7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/RSSSolarWindsConfigurationWindowController.xib; sourceTree = "<group>"; };
+		F4D2C98B1B4B2D5F005B7CD7 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = rsscommon/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4D2C98D1B4B2F33005B7CD7 /* it */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localized.strings; sourceTree = "<group>"; };
+		F4D2C98E1B4B2F33005B7CD7 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/RSSSolarWindsConfigurationWindowController.xib; sourceTree = "<group>"; };
+		F4D2C98F1B4B2F40005B7CD7 /* it */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = it; path = rsscommon/it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4DA63BC1B48A44B0024B369 /* RSSCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionViewItem.h; path = rsscommon/RSSCollectionViewItem.h; sourceTree = "<group>"; };
 		F4DA63BD1B48A44B0024B369 /* RSSCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSCollectionViewItem.m; path = rsscommon/RSSCollectionViewItem.m; sourceTree = "<group>"; };
 		F4DA63BE1B48A44B0024B369 /* RSSCollectionViewItemLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSCollectionViewItemLabel.h; path = rsscommon/RSSCollectionViewItemLabel.h; sourceTree = "<group>"; };
@@ -363,6 +369,8 @@
 			knownRegions = (
 				en,
 				fr,
+				ja,
+				it,
 			);
 			mainGroup = F4612CC81AE1B52600F4F028;
 			productRefGroup = F4612CD31AE1B52600F4F028 /* Products */;
@@ -477,6 +485,8 @@
 			children = (
 				F467A38E1AF1AE3E00C5D70D /* en */,
 				F4D200241B49DC6D00F11EC6 /* fr */,
+				F4D2C98B1B4B2D5F005B7CD7 /* ja */,
+				F4D2C98F1B4B2F40005B7CD7 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -486,6 +496,8 @@
 			children = (
 				F494823E1AEAFA41000BDFA1 /* en */,
 				F4D200231B49DC5C00F11EC6 /* fr */,
+				F4D2C98A1B4B2D24005B7CD7 /* ja */,
+				F4D2C98E1B4B2F33005B7CD7 /* it */,
 			);
 			name = RSSSolarWindsConfigurationWindowController.xib;
 			sourceTree = "<group>";
@@ -495,6 +507,8 @@
 			children = (
 				F4CC2BF31B449F9700968EBF /* en */,
 				F4D200221B49DC5C00F11EC6 /* fr */,
+				F4D2C9891B4B2D24005B7CD7 /* ja */,
+				F4D2C98D1B4B2F33005B7CD7 /* it */,
 			);
 			name = Localized.strings;
 			sourceTree = "<group>";
