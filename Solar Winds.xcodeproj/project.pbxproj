@@ -147,6 +147,9 @@
 		F4FEFA481B4C7A9E0020CB74 /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
 		F4FEFA491B4C7A9E0020CB74 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/RSSSolarWindsConfigurationWindowController.xib; sourceTree = "<group>"; };
 		F4FEFA4A1B4C7AAE0020CB74 /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = rsscommon/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4FEFA4C1B4C7CE80020CB74 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localized.strings; sourceTree = "<group>"; };
+		F4FEFA4D1B4C7CE80020CB74 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = sv; path = sv.lproj/RSSSolarWindsConfigurationWindowController.xib; sourceTree = "<group>"; };
+		F4FEFA4E1B4C7CF60020CB74 /* sv */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = sv; path = rsscommon/sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +382,7 @@
 				it,
 				de,
 				es,
+				sv,
 			);
 			mainGroup = F4612CC81AE1B52600F4F028;
 			productRefGroup = F4612CD31AE1B52600F4F028 /* Products */;
@@ -497,6 +501,7 @@
 				F4D2C98F1B4B2F40005B7CD7 /* it */,
 				F489A4021B4BB6B700350178 /* de */,
 				F4FEFA4A1B4C7AAE0020CB74 /* es */,
+				F4FEFA4E1B4C7CF60020CB74 /* sv */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				F4D2C98E1B4B2F33005B7CD7 /* it */,
 				F489A4011B4BB6A500350178 /* de */,
 				F4FEFA491B4C7A9E0020CB74 /* es */,
+				F4FEFA4D1B4C7CE80020CB74 /* sv */,
 			);
 			name = RSSSolarWindsConfigurationWindowController.xib;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				F4D2C98D1B4B2F33005B7CD7 /* it */,
 				F489A4001B4BB6A500350178 /* de */,
 				F4FEFA481B4C7A9E0020CB74 /* es */,
+				F4FEFA4C1B4C7CE80020CB74 /* sv */,
 			);
 			name = Localized.strings;
 			sourceTree = "<group>";
