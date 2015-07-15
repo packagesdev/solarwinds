@@ -3,7 +3,7 @@
 
 NSString * const RSSSolarWinds_Settings_StandardSetKey=@"Standard set";
 
-NSString * const RSSSolarWinds_Settings_WindsCount=@"Winds count";
+NSString * const RSSSolarWinds_Settings_WindsCountKey=@"Winds count";
 NSString * const RSSSolarWinds_Settings_ParticlesCountKey=@"Particles count";
 NSString * const RSSSolarWinds_Settings_EmittersCountKey=@"Emiiters count";	// Keep the typo for backward compatibility
 NSString * const RSSSolarWinds_Settings_GeometryTypeKey=@"Geometry";
@@ -30,7 +30,7 @@ NSString * const RSSSolarWinds_Settings_MotionBlurKey=@"Blur";
 		
 		if (_standardSet==RSSSolarWindsSetCustom)
 		{
-			_numberOfWinds=[inDictionary[RSSSolarWinds_Settings_WindsCount] unsignedIntegerValue];
+			_numberOfWinds=[inDictionary[RSSSolarWinds_Settings_WindsCountKey] unsignedIntegerValue];
 			_particlesPerWind=[inDictionary[RSSSolarWinds_Settings_ParticlesCountKey] unsignedIntegerValue];
 			_emittersPerWind=[inDictionary[RSSSolarWinds_Settings_EmittersCountKey] unsignedIntegerValue];
 			_geometryType=[inDictionary[RSSSolarWinds_Settings_GeometryTypeKey] unsignedIntegerValue];
@@ -57,7 +57,7 @@ NSString * const RSSSolarWinds_Settings_MotionBlurKey=@"Blur";
 	{
 		tMutableDictionary[RSSSolarWinds_Settings_StandardSetKey]=@(_standardSet);
 		
-		tMutableDictionary[RSSSolarWinds_Settings_WindsCount]=@(_numberOfWinds);
+		tMutableDictionary[RSSSolarWinds_Settings_WindsCountKey]=@(_numberOfWinds);
 		tMutableDictionary[RSSSolarWinds_Settings_ParticlesCountKey]=@(_particlesPerWind);
 		tMutableDictionary[RSSSolarWinds_Settings_EmittersCountKey]=@(_emittersPerWind);
 		tMutableDictionary[RSSSolarWinds_Settings_GeometryTypeKey]=@(_geometryType);
