@@ -57,9 +57,9 @@
                                 </buttonCell>
                             </button>
                             <textField verticalHuggingPriority="750" id="Ddy-ja-qZS">
-                                <rect key="frame" x="172" y="15" width="86" height="17"/>
+                                <rect key="frame" x="148" y="15" width="110" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="ディスプレイ:" id="5in-rg-APK">
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="ディスプレイ：" id="5in-rg-APK">
                                     <font key="font" size="13" name="HiraKakuProN-W6"/>
                                     <color key="textColor" white="0.14112903230000001" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -99,9 +99,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" id="i10-OS-wP7">
-                                <rect key="frame" x="190" y="45" width="68" height="17"/>
+                                <rect key="frame" x="174" y="45" width="84" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="太陽風数:" id="sUi-at-8Yp">
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="太陽風数：" id="sUi-at-8Yp">
                                     <font key="font" size="13" name="HiraKakuProN-W6"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -146,7 +146,7 @@
                                 </connections>
                             </slider>
                             <textField verticalHuggingPriority="750" id="h5z-Ig-yFU">
-                                <rect key="frame" x="207" y="20" width="51" height="17"/>
+                                <rect key="frame" x="201" y="20" width="57" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="風速：" id="oz7-5u-z0R">
                                     <font key="font" size="13" name="HiraKakuProN-W6"/>
@@ -346,7 +346,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" id="4qO-fr-eOf">
-                                <rect key="frame" x="119" y="21" width="139" height="17"/>
+                                <rect key="frame" x="115" y="21" width="143" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="モーション・ブラー：" id="0s2-7L-MtL">
                                     <font key="font" size="13" name="HiraKakuProN-W6"/>

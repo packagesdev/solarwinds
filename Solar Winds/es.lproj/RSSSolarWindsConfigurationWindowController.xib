@@ -170,7 +170,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" id="Q5L-l7-hbI">
-                                <rect key="frame" x="33" y="70" width="225" height="17"/>
+                                <rect key="frame" x="23" y="70" width="235" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Número de particulas por viento:" id="buf-Bf-84U">
                                     <font key="font" metaFont="systemBold"/>
