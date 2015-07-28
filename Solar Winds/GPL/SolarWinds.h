@@ -28,10 +28,16 @@ class wind;
 
 class scene
 {
+	private:
+	
+		wind *winds;
+	
+		unsigned char lightTexture[LIGHTSIZE][LIGHTSIZE];
+	
 	public:
 		
 		int windsCount;
-		wind *winds;
+	
 		
 		int emittersCount;
 		int particlesCount;
@@ -42,8 +48,6 @@ class scene
 		int windSpeed;
 		int motionBlur;
 		
-		unsigned char lightTexture[LIGHTSIZE][LIGHTSIZE];
-	
 		scene();
 		virtual ~scene();
 	
