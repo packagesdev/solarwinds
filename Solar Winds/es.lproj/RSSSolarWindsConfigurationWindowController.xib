@@ -253,7 +253,7 @@
                             <textField verticalHuggingPriority="750" id="FhL-yt-Lz9">
                                 <rect key="frame" x="120" y="20" width="138" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Tipo de Geometría:" id="Wbj-NG-ASV">
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Tipo de geometría:" id="Wbj-NG-ASV">
                                     <font key="font" metaFont="systemBold"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -262,13 +262,13 @@
                             <popUpButton verticalHuggingPriority="750" id="BDO-3W-Gi9">
                                 <rect key="frame" x="262" y="14" width="128" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="Luces" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="11o-d8-YXA" id="pF8-EY-lzT">
+                                <popUpButtonCell key="cell" type="push" title="Puntos" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="2u7-QA-nJw" id="pF8-EY-lzT">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="h4c-kz-UGR">
                                         <items>
-                                            <menuItem title="Luces" state="on" id="11o-d8-YXA"/>
-                                            <menuItem title="Puntos" tag="1" id="2u7-QA-nJw"/>
+                                            <menuItem title="Luces" id="11o-d8-YXA"/>
+                                            <menuItem title="Puntos" state="on" tag="1" id="2u7-QA-nJw"/>
                                             <menuItem title="Líneas" tag="2" id="VwW-nC-lmT"/>
                                         </items>
                                     </menu>
