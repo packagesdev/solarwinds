@@ -30,6 +30,8 @@ class scene
 {
 	private:
 	
+		int _first2Frames;
+	
 		wind *winds;
 	
 		unsigned char lightTexture[LIGHTSIZE][LIGHTSIZE];

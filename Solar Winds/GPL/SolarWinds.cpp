@@ -39,6 +39,8 @@ scene::scene()
 {
 	srand((unsigned)time(NULL));
 	rand(); rand(); rand(); rand(); rand();
+	
+	_first2Frames=2;
 }
 
 scene::~scene()
@@ -66,8 +68,7 @@ void scene::resize(int inWidth,int inHeight)
 	glLoadIdentity();
 	gluPerspective(90.0, float(inWidth) / float(inHeight), 1.0, 10000);
 	
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClearColor(0.0,0.0,0.0,1.0);
 }
 
 void scene::create()
@@ -171,8 +172,6 @@ void scene::create()
 
 void scene::draw()
 {
-	//glLoadIdentity();
-	
 	if(!geometryType)
 	{
 		glBindTexture(GL_TEXTURE_2D, 0);
@@ -184,6 +183,15 @@ void scene::draw()
 	}
 	else
 	{
+		if (_first2Frames>0)
+		{
+			_first2Frames--;	// Due to the double buffer, we need to clear twice
+			
+			glClear(GL_COLOR_BUFFER_BIT);
+			
+			return;
+		}
+		
 		glMatrixMode(GL_PROJECTION);
 		glPushMatrix();
 		glLoadIdentity();
