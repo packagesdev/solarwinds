@@ -196,9 +196,9 @@
 			
 			[_numberOfParticlesPerWindSlider setIntegerValue:tMinimumNumberOfParticlesPerWind];
 			
-			NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tMinimumNumberOfParticlesPerWind]];
+			NSString * tFormattedString=[_numberFormatter stringFromNumber:@(tMinimumNumberOfParticlesPerWind)];
 			
-			[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
+			_numberOfParticlesPerWindLabel.stringValue=tFormattedString;
 		}
 	}
 	else
@@ -289,7 +289,7 @@
 		
 		NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.particlesPerWind]];
 	
-		[_numberOfParticlesPerWindLabel setStringValue:tFormattedString];
+		_numberOfParticlesPerWindLabel.stringValue=tFormattedString;
 	
 		[self _setAsCustomSet];
 	}
@@ -332,9 +332,9 @@
 	{
 		tSolarWindsSettings.emittersPerWind=[sender integerValue];
 	
-		NSString * tFormattedString=[_numberFormatter stringFromNumber:[NSNumber numberWithUnsignedInteger:tSolarWindsSettings.emittersPerWind]];
+		NSString * tFormattedString=[_numberFormatter stringFromNumber:@(tSolarWindsSettings.emittersPerWind)];
 	
-		[_numberOfEmittersPerWindLabel setStringValue:tFormattedString];
+		_numberOfEmittersPerWindLabel.stringValue=tFormattedString;
 	
 		[self _updateMinValueOfParticlesPerWindSlider];
 	
@@ -392,7 +392,7 @@
 	if (inNotification.object==_settingsCollectionView)
 	{
 		NSIndexSet * tIndexSet=[_settingsCollectionView selectionIndexes];
-		NSUInteger tIndex=[tIndexSet firstIndex];
+		NSUInteger tIndex=tIndexSet.firstIndex;
 		
 		RSSCollectionViewItem * tCollectionViewItem=(RSSCollectionViewItem *)[_settingsCollectionView itemAtIndex:tIndex];
 		
