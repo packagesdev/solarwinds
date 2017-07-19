@@ -109,14 +109,14 @@
 		
 		if (tShowErrorMessage==YES)
 		{
-			NSRect tFrame=[self frame];
+			NSRect tFrame=self.frame;
 			
 			NSMutableParagraphStyle * tMutableParagraphStyle=[[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 			[tMutableParagraphStyle setAlignment:NSCenterTextAlignment];
 			
-			NSDictionary * tAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont systemFontSize]],NSFontAttributeName,
-										  [NSColor whiteColor],NSForegroundColorAttributeName,
-										  tMutableParagraphStyle,NSParagraphStyleAttributeName,nil];
+			NSDictionary * tAttributes = @{NSFontAttributeName:[NSFont systemFontOfSize:[NSFont systemFontSize]],
+										   NSForegroundColorAttributeName:[NSColor whiteColor],
+										   NSParagraphStyleAttributeName:tMutableParagraphStyle};
 			
 			
 			NSString * tString=NSLocalizedStringFromTableInBundle(@"Minimum OpenGL requirements\rfor this Screen Effect\rnot available\ron your graphic card.",@"Localizable",[NSBundle bundleForClass:[self class]],@"No comment");
@@ -166,7 +166,14 @@
 		_OpenGLIncompatibilityDetected=YES;
 		return;
 	}
-	_openGLView = [[NSOpenGLView alloc] initWithFrame:[self bounds] pixelFormat:tFormat];
+	
+	if (_openGLView!=nil)
+	{
+		[_openGLView removeFromSuperview];
+		_openGLView=nil;
+	}
+	
+	_openGLView = [[NSOpenGLView alloc] initWithFrame:self.bounds pixelFormat:tFormat];
 	
 	if (_openGLView!=nil)
 	{
@@ -182,7 +189,7 @@
 	
 	[[_openGLView openGLContext] makeCurrentContext];
 	
-	NSRect tPixelBounds=[_openGLView convertRectToBacking:[_openGLView bounds]];
+	NSRect tPixelBounds=[_openGLView convertRectToBacking:_openGLView.bounds];
 	NSSize tSize=tPixelBounds.size;
 	
 	_scene=new scene();
